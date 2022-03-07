@@ -1,0 +1,316 @@
+/*GLOBAL**********************************************************************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto&display=swap');
+
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+p, a, label, input, textarea, button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+a {
+    color: var(--han-purple);
+    text-decoration: none;
+}
+
+button  {
+    background-color: var(--french-rose);
+    border-color: var(--french-rose);
+    color: #FFFFFF;
+    border: 1px solid var(--french-rose);
+    border-radius: 25px;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 20px 10px 100px 10px;
+    padding: 10px 30px 10px 30px;
+}
+
+@media screen and (min-width: 768px) {
+    p, a, label, input, textarea, button {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    p, a, label, input, textarea, button {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    h1 {
+        font-size: 26px;
+    }
+}
+
+:root {
+    --han-purple: #5722CD;
+    --majorelle-blue: #4B49E8;
+    --magnolia: #F2F0FF;
+    --french-rose: #ED4385;
+    --rich-black: #0C0C0C;
+    --sonic-silver: #7A7A7A;
+}
+
+body {
+    /*max-width: 1200px;*/
+    margin: 0;
+}
+
+/*HEADER**********************************************************************************/
+header {
+    background: linear-gradient(90deg, rgba(75,73,231,1) 0%, rgba(87,35,205,1) 100%);
+    color: #F3F6F9;
+}
+
+.list-info {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: flex-end;
+    gap: 35px;
+    margin: 0;
+    padding-right: 40px;
+}
+
+.list-info a {
+    color: #FFFFFF;
+}
+
+.header-text {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.header-text img {
+    max-height: 75px;
+}
+
+@media screen and (max-width: 767px) {
+    .header-text h1 {
+        padding: 0 30px 0 30px;
+    }
+
+    .list-info {
+        justify-content: space-between;
+        margin: 0 40px 20px 40px;
+        padding: 10px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .header-text {
+        padding: 0 50px 0 50px;
+    }
+}
+
+/*SUMMARY**********************************************************************************/
+
+.summary-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0 50px 0 50px;
+    color: var(--han-purple);
+    margin: 40px 0 40px 0;
+}
+
+.summary-text p{
+    color: var(--rich-black);
+    margin: 40px 0 40px 0;
+}
+
+.summary-text h2 {
+    margin: 10px 0 10px 0;
+}
+
+@media screen and (max-width: 767px) {
+    h2 {
+        font-size: 20px;
+    }
+}
+
+/*WORK**********************************************************************************/
+
+.wrapper-work {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: #F3F6F9;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 40px;
+    padding-bottom: 100px;
+}
+.wrapper-article {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 30px;
+}
+
+.wrapper-article-inverted {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    max-width: 100%;
+    margin: 30px;
+}
+
+.image-work {
+    flex: 1 1 auto;
+    max-width: 55%;
+    box-shadow: 0 12px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.work-article-text {
+    flex: 1 1 auto;
+    max-width: calc(40% - 100px);
+    margin: 20px 50px 20px 50px;
+
+}
+
+.work-article-text a {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.work-article-text p {
+    padding: 10px 0 10px 0;
+}
+
+@media screen and (max-width: 767px) {
+    .wrapper-article {
+        display: flex;
+        margin: 15px;
+    }
+
+    .wrapper-article-inverted {
+        display: flex;
+        margin: 15px;
+    }
+
+    .work-article-text {
+        max-width: 100%;
+        margin: 20px 0 0 0;
+        font-weight: bold;
+    }
+
+    .image-work {
+        max-width: 100%;
+    }
+
+}
+
+/*SERVICES**********************************************************************************/
+
+.services {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    max-width: 100%;
+    gap: 30px 30px;
+    padding: 60px;
+
+}
+.service-article {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex: calc(33.33% - 40px);
+    border: 1px solid var(--han-purple);
+    padding: 30px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    min-width: 300px;
+}
+
+.service-article img {
+    max-width: 60px;
+}
+
+.service-article h3 {
+    color: var(--han-purple);
+}
+
+.service-article p {
+    color: var(--sonic-silver);
+}
+
+@media screen and (max-width: 767px) {
+    .services {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/*FORM***********************************************************************************/
+
+.form {
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    width: 60%;
+}
+
+.form label {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    padding: 10px 0 0 0;
+
+}
+
+.form input, textarea {
+    padding: 12px 20px;
+    border-radius: 5px;
+    display: block;
+}
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: linear-gradient(135deg, rgba(75,73,231,1) 0%, rgba(87,35,205,1) 100%);
+    color: #F3F6F9;
+    padding-top: 80px;
+}
+
+.form button {
+    align-self: center;
+}
+
+@media screen and (max-width: 767px) {
+    .form {
+        width: 90%;
+    }
+}
+
+/*FOOTER***********************************************************************************/
+
+footer {
+    display: flex;
+    justify-content: center;
+    color: #FFFFFF;
+    background-color: var(--rich-black);
+    padding: 10px;
+}
